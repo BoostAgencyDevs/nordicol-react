@@ -1,0 +1,149 @@
+.navbar-desktop, .navbar-mobile {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; height: 70px;
+    font-family: "Poppins", sans-serif;
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 145px;
+        cursor: pointer;
+
+        .logo {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }    
+    }
+
+    .lists {
+        display: flex;
+        list-style: none;
+        font-weight: bold;
+
+        .list {
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    } 
+}
+
+/* ====================================================================================================
+                                        NAVBAR MOBILE VERSION
+=======================================================================================================*/
+
+@media (width < 1080px) {
+    .navbar-mobile {
+        display: flex;
+        position: relative;
+
+        .menu-container {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            cursor: pointer;
+            width: 25%;
+            height: 100%;
+            z-index: 1000;
+
+            i {
+                font-size: 1.2rem;
+            }
+        }
+    
+        #menu-white {
+            color: white;
+        }
+    
+        #menu-black {
+            color: black;
+        }
+    
+        .lists {
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            padding: 50px 0;
+            z-index: 999;
+            width: 100%; min-height: 45vh;
+            gap:12px;
+            transition: clip-path 0.35s ease;
+            background: linear-gradient(90deg,rgba(255, 106, 31, 1) 10%, rgba(255, 160, 94, 1) 100%);
+    
+            .list {
+                cursor: pointer;
+                margin-top: 20px;
+                padding: 12px 0;
+                padding-left: 5%;
+
+                a {
+                    color: white;
+                }
+
+                &:hover {
+                    background-color: white;
+
+                    a {
+                        color: #e74c3c;
+                    }
+                }
+            }
+        }
+
+        .hideMenu {
+            clip-path: circle(0 at 100% 0%);
+        }
+    
+        .showMenu {
+            clip-path: circle(150% at 100% 0%);
+        }
+    }
+}
+
+/* ====================================================================================================
+                                        NAVBAR DESKTOP VERSION
+=======================================================================================================*/
+
+@media (width >= 1080px) {
+    .navbar-desktop {
+        display: flex;
+
+        .lists {
+            justify-content: space-around;
+            width: 60%; height: 100%;
+            align-items: center;
+
+            .list {
+                cursor: pointer;
+                padding: 12px 16px;
+                border-radius: 12px;
+                
+                a {
+                    color: black;
+
+                    &:hover {
+                        color: #e74c3c;
+                    }
+                }
+
+                
+            }
+
+            .btn {
+                transition: transform 0.35s ease;
+                color: white;
+                background: linear-gradient(90deg,rgba(255, 106, 31, 1) 10%, rgba(255, 160, 94, 1) 100%) ;
+                
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

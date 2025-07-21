@@ -1,0 +1,31 @@
+.outlet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; min-height: 100vh;
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%; min-height: 100vh;
+        
+        .marketing, .features, .target-leads, .key-benefits, .demo, .testimonials, .secure-privace {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; min-height: 100vh;
+        }
+    
+        #odd-section {
+            background: linear-gradient(120deg, #FFF6F2, #FFF7F1, #FFF8ED);
+        }
+    
+        #even-section {
+            background-color: white;
+        }
+    }
+}
+
+

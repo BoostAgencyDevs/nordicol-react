@@ -1,0 +1,54 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 2.5rem 0;
+    color: rgb(168, 168, 168);
+    background-color: #252525;
+    font-family: 'Poppins', sans-serif;
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 2rem;
+        gap: 2rem;
+
+        figure {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 175px; height: 70px;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+            
+            li {
+                a {
+                    text-decoration: none;
+                    color: rgb(168, 168, 168);  
+                }
+            }
+        }
+
+        .copy {
+            font-size: 14px;
+            border-top: 1px solid rgba(168, 168, 168, 0.2);
+            width: 75%;
+            padding-top: 1.2rem;
+        }
+    }
+}

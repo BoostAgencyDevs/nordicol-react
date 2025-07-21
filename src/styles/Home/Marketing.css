@@ -1,0 +1,232 @@
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.marketing-container {
+    width: 95%; min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+
+    .marketing-info, .marketing-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    .marketing-info {
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        gap: 2rem;
+        
+        span {
+            background: linear-gradient(90deg, rgba(255, 106, 31, 1) 10%, rgba(255, 160, 94, 1) 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h3 {
+            font-size: 13px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background-color: white
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            h2 {
+                font-size: 3rem;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.05rem;
+            }
+
+            
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%; min-height: 120px;
+            gap: 1rem;
+
+            .btn-demo, .btn-whatsapp {
+                min-width: 250px; height: 60px;
+                border-radius: 12px;
+                border: none;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                font-size: 0.9rem;
+                transition: transform 0.35s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .btn-demo {
+                background: linear-gradient(90deg, rgba(255, 106, 31, 1) 10%, rgba(255, 160, 94, 1) 100%);
+            }
+
+            .btn-whatsapp {
+                background: #25D366;
+            }
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            list-style: none;
+            width: 100%; min-height: 50px;
+
+            .colors, .text, .stars, .calification {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex: 1 1 80px;
+                height: 100%;
+            }
+
+            .colors {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                .red, .orange, .yellow {
+                    width: 35px; height: 35px;
+                    border-radius: 50%;
+                }
+                .red {
+                    background: #FF0000;
+                    margin-right: -30px;
+                }
+    
+                .orange {
+                    background-color: #FF9100;
+                    margin-right: -30px;
+                }
+    
+                .yellow {
+                    background-color: #f0ba31
+                    ;
+                }
+            }
+
+            .text {
+                min-width: 200px;
+            }
+        }
+        
+    }
+
+    .marketing-image {  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%; min-height: 100vh;
+
+        figure {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            width: 85%;
+            border-radius: 12px;
+            padding: 0.9rem;
+            background-color: white;
+            transition: transform 0.35s ease;
+
+            &:hover {
+                transform: rotate(5deg);
+            }
+        
+            img {
+                object-fit: cover;
+                object-position: center;
+                width: 100%; height: 100%;
+                border-radius: 8px;
+            }
+
+            
+
+            figcaption {
+                background-color: #25D366;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                position: absolute;
+                top: -15px;
+                right: -15px;
+                padding: 8px 12px;
+                border-radius: 8px;
+                animation: twinkle 1.85s infinite;
+            }
+        }
+    }
+}
+
+/* ====================================================================================================
+                                        MARKETING - MOBILE VERSION
+=======================================================================================================*/
+
+@media (width < 720px) {
+    .marketing-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        .marketing-info {
+
+            .buttons-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        .marketing-image {
+            max-width: 320px; min-height: 250px;
+        }
+    }
+}   
+
+/* ====================================================================================================
+                                        MARKETING - DESKTOP VERSION
+=======================================================================================================*/
+
+@media (width >= 720px) {
+    .marketing-container {
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(2, 1fr); 
+
+        .marketing-info {
+
+            .buttons-container {
+                flex-wrap: wrap;
+
+                .btn-demo, .btn-whatsapp {
+                    flex: 1 1 250px;
+                }
+            }
+        }
+    }
+}
