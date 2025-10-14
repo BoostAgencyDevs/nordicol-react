@@ -1,13 +1,13 @@
 [build]
   # Comando para construir el proyecto
-  command = "npm ci && npm run build"
+  command = "npm install && npm run build"
   
   # Directorio donde se genera la build
   publish = "dist"
   
   # Variables de entorno para el build
   [build.environment]
-    NODE_VERSION = "20"
+    NODE_VERSION = "18.20.4"
     NPM_CONFIG_LEGACY_PEER_DEPS = "true"
 
 [build.processing]
