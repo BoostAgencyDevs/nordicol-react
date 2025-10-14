@@ -49,6 +49,7 @@
 
             p {
                 font-size: 1.05rem;
+                line-height: 1.6;
             }
 
             
@@ -152,9 +153,11 @@
             padding: 0.9rem;
             background-color: white;
             transition: transform 0.35s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
             &:hover {
-                transform: rotate(5deg);
+                transform: rotate(5deg) scale(1.02);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
             }
         
             img {
@@ -225,6 +228,159 @@
 
                 .btn-demo, .btn-whatsapp {
                     flex: 1 1 250px;
+                }
+            }
+        }
+    }
+}
+
+/* ====================================================================================================
+                                    MARKETING - PANTALLAS GRANDES
+=======================================================================================================*/
+
+@media (width >= 1080px) {
+    .marketing-container {
+        .marketing-info {
+            article {
+                h2 {
+                    font-size: 3.5rem; /* Título más grande */
+                }
+
+                p {
+                    font-size: 1.3rem; /* Texto más grande para pantallas grandes */
+                    line-height: 1.7;
+                }
+            }
+
+            h3 {
+                font-size: 15px; /* Badge más grande */
+            }
+
+            .buttons-container {
+                .btn-demo, .btn-whatsapp {
+                    font-size: 1.1rem; /* Botones con texto más grande */
+                    min-width: 280px;
+                    height: 65px;
+                }
+            }
+
+            .info {
+                .text {
+                    font-size: 1.1rem; /* Texto de info más grande */
+                }
+            }
+        }
+
+        .marketing-image {
+            figure {
+                width: 90%; /* Imagen más grande */
+                padding: 1.2rem; /* Más padding */
+                box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+
+                &:hover {
+                    transform: rotate(5deg) scale(1.03);
+                    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+                }
+            }
+        }
+    }
+}
+
+@media (width >= 1440px) {
+    .marketing-container {
+        .marketing-info {
+            article {
+                h2 {
+                    font-size: 4rem; /* Título aún más grande para 2K+ */
+                }
+
+                p {
+                    font-size: 1.5rem; /* Texto más grande para 2K+ */
+                    line-height: 1.8;
+                }
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            .buttons-container {
+                .btn-demo, .btn-whatsapp {
+                    font-size: 1.2rem;
+                    min-width: 300px;
+                    height: 70px;
+                }
+            }
+
+            .info {
+                .text {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .marketing-image {
+            figure {
+                width: 95%; /* Imagen aún más grande para 2K+ */
+                padding: 1.5rem; /* Más padding profesional */
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+
+                &:hover {
+                    transform: rotate(5deg) scale(1.04);
+                    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+}
+
+@media (width >= 1920px) {
+    .marketing-container {
+        .marketing-info {
+            article {
+                h2 {
+                    font-size: 4.5rem; /* Título óptimo para 4K */
+                }
+
+                p {
+                    font-size: 1.7rem; /* Texto óptimo para 4K */
+                    line-height: 1.9;
+                }
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            .buttons-container {
+                .btn-demo, .btn-whatsapp {
+                    font-size: 1.3rem;
+                    min-width: 320px;
+                    height: 75px;
+                }
+            }
+
+            .info {
+                .text {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        .marketing-image {
+            figure {
+                width: 100%; /* Imagen máxima para 4K */
+                padding: 2rem; /* Padding máximo profesional */
+                box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+
+                &:hover {
+                    transform: rotate(5deg) scale(1.05);
+                    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+                }
+
+                figcaption {
+                    font-size: 1.1rem; /* Badge "En vivo!" más grande */
+                    padding: 10px 15px;
                 }
             }
         }
