@@ -1,0 +1,75 @@
+[build]
+  # Comando para construir el proyecto
+  command = "yarn build"
+  
+  # Directorio donde se genera la build
+  publish = "dist"
+  
+  # Variables de entorno para el build (si las necesitas en el futuro)
+  # [build.environment]
+  #   NODE_VERSION = "18"
+  #   YARN_VERSION = "1.22.22"
+
+[build.processing]
+  # Optimizaciones de build
+  skip_processing = false
+
+[build.processing.css]
+  # Minificar CSS
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  # Minificar JavaScript
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  # Minificar HTML
+  pretty_urls = true
+
+[build.processing.images]
+  # Optimizar imágenes
+  compress = true
+
+# Configuración de redirecciones para SPA (Single Page Application)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers de seguridad
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Seguridad
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Cache para assets estáticos
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    # Cache para HTML (más corto para actualizaciones)
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    # No cache para service workers
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Configuración de funciones (si las necesitas en el futuro)
+# [functions]
+#   directory = "netlify/functions"
+#   node_bundler = "esbuild"
+
+# Configuración de plugins (si los necesitas)
+# [[plugins]]
+#   package = "@netlify/plugin-sitemap"
+#   [plugins.inputs]
+#     buildDir = "dist"
