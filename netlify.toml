@@ -1,6 +1,6 @@
 [build]
   # Comando para construir el proyecto
-  command = "npm install && npm run build"
+  command = "npm install --include=optional && npm run build"
   
   # Directorio donde se genera la build
   publish = "dist"
