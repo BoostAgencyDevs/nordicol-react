@@ -113,36 +113,102 @@
 @media (width >= 1080px) {
     .navbar-desktop {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 2rem;
+        box-sizing: border-box;
+
+        .logo-container {
+            flex-shrink: 0;
+            width: 145px;
+        }
 
         .lists {
-            justify-content: space-around;
-            width: 60%; height: 100%;
+            display: flex;
+            justify-content: flex-end;
             align-items: center;
+            flex: 1;
+            height: 100%;
+            font-size: 1.1rem;
+            gap: 2rem; /* Espaciado entre los enlaces del menú */
 
             .list {
                 cursor: pointer;
                 padding: 12px 16px;
                 border-radius: 12px;
+                white-space: nowrap;
                 
                 a {
                     color: black;
+                    font-size: inherit;
 
                     &:hover {
                         color: #e74c3c;
                     }
                 }
-
-                
             }
 
             .btn {
                 transition: transform 0.35s ease;
                 color: white;
-                background: linear-gradient(90deg,rgba(255, 106, 31, 1) 10%, rgba(255, 160, 94, 1) 100%) ;
+                background: linear-gradient(90deg,rgba(255, 106, 31, 1) 10%, rgba(255, 160, 94, 1) 100%);
+                font-size: inherit;
+                white-space: nowrap;
                 
                 &:hover {
                     transform: scale(1.1);
                 }
+            }
+        }
+    }
+}
+
+/* ====================================================================================================
+                                    PANTALLAS MUY GRANDES (2K, 4K, etc.)
+=======================================================================================================*/
+
+@media (width >= 1440px) {
+    .navbar-desktop {
+        padding: 0 3rem;
+        
+        .lists {
+            font-size: 1.3rem;
+            gap: 3rem; /* Más espacio entre elementos */
+            
+            .list {
+                padding: 14px 18px;
+            }
+        }
+    }
+}
+
+@media (width >= 1920px) {
+    .navbar-desktop {
+        padding: 0 4rem;
+        
+        .lists {
+            font-size: 1.5rem;
+            gap: 4rem; /* Espaciado generoso para pantallas grandes */
+            
+            .list {
+                padding: 16px 24px; /* Botones más grandes */
+            }
+        }
+    }
+}
+
+@media (width >= 2560px) {
+    .navbar-desktop {
+        padding: 0 6rem;
+        
+        .lists {
+            font-size: 1.7rem;
+            gap: 5rem; /* Máximo espaciado para pantallas 4K+ */
+            
+            .list {
+                padding: 18px 28px; /* Botones muy espaciosos */
             }
         }
     }

@@ -6,11 +6,11 @@ export const Marketing = () => {
             <div className="marketing-info">
                 <h3><span><i className="fa-solid fa-bolt"></i></span> Automatización WhatsApp #1</h3>
                 <article>
-                    <h2 className="title">✨ Automatiza tus ventas por <span>WhatsApp</span></h2>
+                    <h2 className="title">Automatiza tus ventas por <span>WhatsApp</span></h2>
                     <p>Descubre todas las herramientas que necesitas para automatizar y escalar tu negocio por WhatsApp</p>
                 </article>
                 <div className="buttons-container">
-                    <button className="btn-demo">📲 Solicitar Demo Gratuita</button>
+                    <button className="btn-demo">Solicitar Demo Gratuita</button>
                     <button className="btn-whatsapp"><i className="fa-regular fa-comment"></i> Hablar por WhatsApp</button>
                 </div>
                 <ul className="info">
