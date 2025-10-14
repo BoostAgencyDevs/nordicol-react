@@ -1,6 +1,6 @@
 [build]
   # Comando para construir el proyecto
-  command = "npm ci --legacy-peer-deps && npm run build"
+  command = "rm -f package-lock.json && npm install --legacy-peer-deps && npm run build"
   
   # Directorio donde se genera la build
   publish = "dist"

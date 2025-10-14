@@ -11,6 +11,9 @@ package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
+# Ignorar package-lock.json para evitar conflictos
+package-lock.json
+
 # Archivos de entorno
 .env
 .env.local
