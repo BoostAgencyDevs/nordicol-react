@@ -38,7 +38,7 @@
   to = "/index.html"
   status = 200
 
-# Headers de seguridad
+# Headers de seguridad y PWA
 [[headers]]
   for = "/*"
   [headers.values]
@@ -62,6 +62,22 @@
   [headers.values]
     # No cache para service workers
     Cache-Control = "public, max-age=0, must-revalidate"
+    # Content-Type para service workers
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    # Cache para manifest
+    Cache-Control = "public, max-age=86400"
+    # Content-Type para manifest
+    Content-Type = "application/manifest+json"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    # Cache para imágenes
+    Cache-Control = "public, max-age=31536000, immutable"
 
 # Configuración de funciones (si las necesitas en el futuro)
 # [functions]

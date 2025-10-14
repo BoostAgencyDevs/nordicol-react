@@ -1,0 +1,7 @@
+# Netlify redirects file
+# Redirect all routes to index.html for SPA
+/*    /index.html   200
+
+# PWA specific redirects
+/sw.js    /sw.js   200
+/manifest.json    /manifest.json   200

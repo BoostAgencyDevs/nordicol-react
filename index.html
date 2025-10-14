@@ -1,14 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <!--<link rel="icon" type="image/svg+xml" href="/vite.svg" />-->
-    <script src="https://kit.fontawesome.com/31f70b498b.js"></script>
+    
+    <!-- PWA Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nordicol</title>
+    <meta name="theme-color" content="#ff6a1f" />
+    <meta name="description" content="Automatiza tus ventas por WhatsApp con la herramienta #1 del mercado. Descubre todas las herramientas que necesitas para automatizar y escalar tu negocio." />
+    <meta name="keywords" content="WhatsApp, automatización, ventas, marketing, chatbot, negocio, escalar" />
+    <meta name="author" content="Nordicol" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nordicol.com/" />
+    <meta property="og:title" content="Nordicol - Automatización WhatsApp #1" />
+    <meta property="og:description" content="Automatiza tus ventas por WhatsApp con la herramienta #1 del mercado" />
+    <meta property="og:image" content="/images/nordicol-image.jpeg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://nordicol.com/" />
+    <meta property="twitter:title" content="Nordicol - Automatización WhatsApp #1" />
+    <meta property="twitter:description" content="Automatiza tus ventas por WhatsApp con la herramienta #1 del mercado" />
+    <meta property="twitter:image" content="/images/nordicol-image.jpeg" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo1.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/logo1.png" />
+    <link rel="apple-touch-icon" href="/images/logo1.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/logo1.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo1.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/images/logo1.png" />
+    
+    <!-- Apple PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Nordicol" />
+    
+    <!-- Microsoft PWA -->
+    <meta name="msapplication-TileImage" content="/images/logo1.png" />
+    <meta name="msapplication-TileColor" content="#ff6a1f" />
+    
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/31f70b498b.js"></script>
+    
+    <title>Nordicol - Automatización WhatsApp #1</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registrado exitosamente:', registration.scope);
+            })
+            .catch((registrationError) => {
+              console.log('SW registro falló:', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
