@@ -5,7 +5,10 @@
     
     <!-- PWA Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ff6a1f" />
+    <!-- Fallbacks para navegadores específicos (sin theme-color para evitar warnings) -->
+    <meta name="msapplication-navbutton-color" content="#ff6a1f" />
+    <meta name="msapplication-TileColor" content="#ff6a1f" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="description" content="Automatiza tus ventas por WhatsApp con la herramienta #1 del mercado. Descubre todas las herramientas que necesitas para automatizar y escalar tu negocio." />
     <meta name="keywords" content="WhatsApp, automatización, ventas, marketing, chatbot, negocio, escalar" />
     <meta name="author" content="Nordicol" />
@@ -30,14 +33,11 @@
     <!-- Icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="/images/logo1.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/images/logo1.png" />
-    <link rel="apple-touch-icon" href="/images/logo1.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/logo1.png" />
+    <!-- Apple Touch Icon - Solo el necesario para compatibilidad -->
     <link rel="apple-touch-icon" sizes="180x180" href="/images/logo1.png" />
-    <link rel="apple-touch-icon" sizes="167x167" href="/images/logo1.png" />
     
     <!-- Apple PWA -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Nordicol" />
     
     <!-- Microsoft PWA -->
@@ -46,6 +46,27 @@
     
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/31f70b498b.js"></script>
+    
+    <!-- Audio Script -->
+    <script src="/audio/modal-sound.js"></script>
+    
+    <!-- Theme Color Compatibility Script -->
+    <script>
+      // Detectar navegador y agregar theme-color solo si es compatible
+      (function() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        const isFirefox = userAgent.includes('firefox');
+        const isOpera = userAgent.includes('opera') || userAgent.includes('opr');
+        
+        // Solo agregar theme-color en navegadores compatibles
+        if (!isFirefox && !isOpera) {
+          const themeColorMeta = document.createElement('meta');
+          themeColorMeta.name = 'theme-color';
+          themeColorMeta.content = '#ff6a1f';
+          document.head.appendChild(themeColorMeta);
+        }
+      })();
+    </script>
     
     <title>Nordicol - Automatización WhatsApp #1</title>
   </head>
