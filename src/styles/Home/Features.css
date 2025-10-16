@@ -410,6 +410,80 @@
             display: block;
         }
     }
+    
+    /* Estilos específicos para móviles */
+    @media (max-width: 768px) {
+        .features-modal {
+            padding: 20px;
+            touch-action: manipulation;
+            
+            .features-modal-content {
+                max-width: 95%;
+                max-height: 85%;
+                border-radius: 8px;
+                touch-action: manipulation;
+                
+                img {
+                    max-height: 70vh;
+                    border-radius: 8px;
+                    -webkit-user-select: none;
+                    user-select: none;
+                    pointer-events: none;
+                }
+            }
+            
+            .features-modal-close {
+                top: 10px;
+                right: 10px;
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+                touch-action: manipulation;
+                -webkit-tap-highlight-color: transparent;
+                
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+    
+    /* Estilos para móviles muy pequeños */
+    @media (max-width: 480px) {
+        .features-modal {
+            padding: 15px;
+            touch-action: manipulation;
+            
+            .features-modal-content {
+                max-width: 98%;
+                max-height: 80%;
+                border-radius: 6px;
+                touch-action: manipulation;
+                
+                img {
+                    max-height: 65vh;
+                    border-radius: 6px;
+                    -webkit-user-select: none;
+                    user-select: none;
+                    pointer-events: none;
+                }
+            }
+            
+            .features-modal-close {
+                top: 8px;
+                right: 8px;
+                width: 32px;
+                height: 32px;
+                font-size: 0.9rem;
+                touch-action: manipulation;
+                -webkit-tap-highlight-color: transparent;
+                
+                &:active {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
 
     .features-modal-close {
         position: absolute;

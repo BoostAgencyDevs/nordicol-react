@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "../../styles/Home/Features.css";
 
 const Features = () => {
@@ -103,6 +103,29 @@ const Features = () => {
             (window as any).playCloseSound();
         }
     };
+
+    // Función para manejar el cierre con tecla Escape
+    const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Escape' && selectedImage) {
+            closeModal();
+        }
+    };
+
+    // Agregar event listener para tecla Escape
+    React.useEffect(() => {
+        if (selectedImage) {
+            document.addEventListener('keydown', handleKeyDown);
+            // Prevenir scroll del body cuando el modal está abierto
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+            document.body.style.overflow = 'unset';
+        };
+    }, [selectedImage]);
 
     return (
         <div className="features-container" id="features">
