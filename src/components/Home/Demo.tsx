@@ -21,7 +21,7 @@ const Demo = () => {
     return (
         <div className="demo-container" id="demo">
             <article className="demo-text">
-                <h2 className="title">📲 Solicita una DEMO ahora</h2>
+                <h2 className="title">Solicita una DEMO ahora</h2>
                 <p className="text">Conéctate con nuestro equipo y recibe una asesoría gratuita sobre cómo automatizar tus ventas y mejorar tu atención por WhatsApp.</p>
             </article>
             <div className="demo-content">
@@ -33,13 +33,22 @@ const Demo = () => {
                         ))}
                     </section>
                     <div className="buttons-container">
-                        <button className="btn-demo"><i className="fa-solid fa-hand-pointer"></i> Solicitar Demo Gratuita</button>
                         <button className="btn-whatsapp"><i className="fa-regular fa-comment"></i> Hablar por WhatsApp</button>
                     </div>
                 </article>
                 <figure>
-                    <figcaption>📸 Así se ve Software Nordicol</figcaption>
-                    <img src="./images/nordicol-image.jpeg" alt="Nordicol" width={50}/>
+                    <figcaption>Demostración en vivo de Software Nordicol</figcaption>
+                    <video 
+                        controls 
+                        preload="metadata"
+                        poster="./images/nordicol-video-poster.jpg"
+                        width="100%"
+                        className="demo-video"
+                    >
+                        <source src="./videos/nordicol-demo.mp4" type="video/mp4" />
+                        <source src="./videos/nordicol-demo.webm" type="video/webm" />
+                        <p>Tu navegador no soporta videos HTML5. <a href="./videos/nordicol-demo.mp4">Descarga el video aquí</a>.</p>
+                    </video>
                 </figure>
             </div>
         </div>
