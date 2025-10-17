@@ -6,7 +6,6 @@ import TargetLeads from "../components/Home/TargetLeads"
 import KeyBenefits from "../components/Home/KeyBenefits"
 import Demo from "../components/Home/Demo"
 import Testimonials from "../components/Home/Testimonials"
-import SecurePrivace from "../components/Home/Secure&Privace"
 
 function Home() {
     const sections = [
@@ -40,11 +39,6 @@ function Home() {
             title: "testimonials",
             component: <Testimonials />
         },
-        {
-            id: 7,
-            title: "secure-privace",
-            component: <SecurePrivace />
-        }
     ]
 
     return (
