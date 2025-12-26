@@ -1,31 +1,32 @@
 import "../../styles/Home/Testimonials.css";
 
-import linearGradient from "../../utils/linearGradient.ts"
-import getInitial from "../../utils/getInitial.ts";
 import toPastel from "../../utils/toPastel.ts";
 
 const Testimonials = () => {
     const testimonials = [
         {
             id: 1,
-            name: "Carlos M.",
-            agency: "Boutique Fashion",
-            testimonial: "Desde que implementamos Nordicol en nuestro negocio, hemos experimentado un aumento significativo en las ventas.",
-            color: "#3498db"
+            name: "PKR",
+            agency: "Ropa",
+            testimonial: "Hemos experimentado un aumento significativo en las ventas.",
+            color: "#3498db",
+            logo: "/images/clients/Copia de LOGOS PKR.svg"
         },
         {
             id: 2,
-            name: "Ana L.",
-            agency: "Tienda Digital",
-            testimonial: "La automatización de nuestras respuestas ha permitido que nuestro equipo se enfocara en actividades más estratégicas.",
-            color: "#e74c3c"
+            name: "Tu Tienda a un Click",
+            agency: "Ecommerce",
+            testimonial: "La automatización ha mejorado nuestra eficiencia operativa.",
+            color: "#e74c3c",
+            logo: "/images/clients/Tutiendaclik.svg"
         },
         {
             id: 3,
-            name: "Juan P.",
-            agency: "Agencia de Marketing Pro",
-            testimonial: "Es fácil de usar y nos ha ayudado a mejorar nuestros resultados, especialmente en la atención al cliente.",
-            color: "#2ecc71"
+            name: "Tu Esencia Natural",
+            agency: "Productos Naturales",
+            testimonial: "Nos ha ayudado a mejorar la atención al cliente.",
+            color: "#2ecc71",
+            logo: "/images/clients/Diseño sin título (3).svg"
         }
     ] 
 
@@ -38,16 +39,14 @@ const Testimonials = () => {
             <section className="testimonials-section">
                 {testimonials.map((testimonial) => (
                     <div className="card" key={testimonial.id} style={{ backgroundColor: toPastel(testimonial.color, 0.45), border: `1px solid ${testimonial.color}` }}>
+                        <div className="logo-container">
+                            <img src={testimonial.logo} alt={testimonial.name} className="client-logo" />
+                        </div>
                         <p className="stars">⭐⭐⭐⭐⭐</p>
                         <p className="testimonial-leads">"{testimonial.testimonial}"</p>
-                        <div className="avatar">
-                            <div className="initial-container">
-                                <p className="initial" style={{ backgroundImage: linearGradient(testimonial.color) }}>{getInitial(testimonial.name)}</p>
-                            </div>
-                            <div className="lead">
-                                <p className="name">{testimonial.name}</p>
-                                <p className="agency">{testimonial.agency}</p>
-                            </div>
+                        <div className="lead">
+                            <p className="name">{testimonial.name}</p>
+                            <p className="agency">{testimonial.agency}</p>
                         </div>
                     </div>
                 ))}

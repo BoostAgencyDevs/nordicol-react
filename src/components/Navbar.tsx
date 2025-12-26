@@ -10,7 +10,7 @@ export const NavBarDesktop = () => {
                 <li className="list"><a href="#features">Características</a></li>
                 <li className="list"><a href="#demo">Demo</a></li>
                 <li className="list"><a href="#testimonials">Testimonios</a></li>
-                <li className="list btn">Solicitar Demo</li>
+                <li className="list btn"><a href="https://wa.me/573212409096" target="_blank" rel="noopener noreferrer">Solicitar Demo</a></li>
             </ul>
         </div>
     );
@@ -36,7 +36,7 @@ export const NavBarMobile = () => {
                 <li className="list"><a href="#features" onClick={toggleMenu}>Características</a></li>
                 <li className="list"><a href="#demo" onClick={toggleMenu}>Demo</a></li>
                 <li className="list"><a href="#testimonials" onClick={toggleMenu}>Testimonios</a></li>
-                <li className="list btn">Solicitar Demo</li>
+                <li className="list btn"><a href="https://wa.me/573212409096" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>Solicitar Demo</a></li>
             </ul>
         </div>
     );

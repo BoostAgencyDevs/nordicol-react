@@ -33,7 +33,7 @@ const Demo = () => {
                         ))}
                     </section>
                     <div className="buttons-container">
-                        <button className="btn-whatsapp"><i className="fa-regular fa-comment"></i> Hablar por WhatsApp</button>
+                        <a href="https://wa.me/573212409096" target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><i className="fa-regular fa-comment"></i> Hablar por WhatsApp</a>
                     </div>
                 </article>
                 <figure>

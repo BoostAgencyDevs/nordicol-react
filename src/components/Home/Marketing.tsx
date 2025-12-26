@@ -10,7 +10,7 @@ export const Marketing = () => {
                     <p>Descubre todas las herramientas que necesitas para automatizar y escalar tu negocio por WhatsApp</p>
                 </article>
                 <div className="buttons-container">
-                    <button className="btn-whatsapp"><i className="fa-regular fa-comment"></i> Hablar por WhatsApp</button>
+                    <a href="https://wa.me/573212409096" target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><i className="fa-regular fa-comment"></i> Hablar por WhatsApp</a>
                 </div>
                 <ul className="info">
                     <li className="colors">

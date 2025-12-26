@@ -154,11 +154,21 @@
                 transition: transform 0.35s ease;
                 color: white;
                 background: linear-gradient(90deg,rgba(255, 106, 31, 1) 10%, rgba(255, 160, 94, 1) 100%);
+                border: 2px solid rgba(255, 106, 31, 1);
+                box-shadow: 0 4px 15px rgba(255, 106, 31, 0.4), 0 0 15px rgba(255, 106, 31, 0.6);
                 font-size: inherit;
                 white-space: nowrap;
                 
+                a {
+                    color: white;
+                    text-decoration: none;
+                    display: block;
+                }
+                
                 &:hover {
                     transform: scale(1.1);
+                    box-shadow: 0 6px 20px rgba(255, 106, 31, 0.5), 0 0 20px rgba(255, 106, 31, 0.8);
+                    border-color: rgba(255, 140, 50, 1);
                 }
             }
         }
