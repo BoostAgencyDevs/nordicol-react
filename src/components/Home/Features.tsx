@@ -18,7 +18,7 @@ const Features = () => {
             id: 2,
             icon: "fa-solid fa-filter",
             title: "Filtro de números",
-            text: "Evita perder tiempo y dinero: filtra automáticamente qué números están activos en WhatsApp antes de enviar tus campañas.",
+            text: "Evita perder tiempo y dinero: filtra automáticamente qué números están activos en Nordicol antes de enviar tus campañas.",
             color: "#e74c3c",
             image: "./images/features/nordicol-image.jpeg"
         },
@@ -58,7 +58,7 @@ const Features = () => {
             id: 7,
             icon: "fa-solid fa-users",
             title: "Captura de grupos y contactos",
-            text: "Extrae automáticamente los miembros de grupos de WhatsApp y segmenta tus campañas.",
+            text: "Extrae automáticamente los miembros de grupos de Nordicol y segmenta tus campañas.",
             color: "#e67e22",
             image: "./images/features/nordicol-image.jpeg"
         },
@@ -131,7 +131,7 @@ const Features = () => {
         <div className="features-container" id="features">
             <article className="features-article">
                 <h2>¿Qué puedes hacer con Nordicol?</h2>
-                <p>Descubre todas las herramientas que necesitas para automatizar y escalar tu negocio por WhatsApp</p>
+                <p>Descubre todas las herramientas que necesitas para automatizar y escalar tu negocio con Nordicol</p>
             </article>
             <section className={`features-section ${showAll ? 'show-additional' : ''}`}>
                 {allSections.map((section) => (

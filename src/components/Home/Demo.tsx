@@ -22,7 +22,7 @@ const Demo = () => {
         <div className="demo-container" id="demo">
             <article className="demo-text">
                 <h2 className="title">Solicita una DEMO ahora</h2>
-                <p className="text">Conéctate con nuestro equipo y recibe una asesoría gratuita sobre cómo automatizar tus ventas y mejorar tu atención por WhatsApp.</p>
+                <p className="text">Conéctate con nuestro equipo y recibe una asesoría gratuita sobre cómo automatizar tus ventas y mejorar tu atención con Nordicol.</p>
             </article>
             <div className="demo-content">
                 <article className="demo-article">

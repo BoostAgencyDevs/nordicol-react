@@ -37,7 +37,7 @@ export const Footer = () => {
                         <figure>
                             <img src="./images/logo2.png" alt="Logo" width={100} />
                         </figure>
-                        <p>La herramienta de automatización WhatsApp más completa del mercado</p>
+                        <p>La herramienta de automatización Nordicol más completa del mercado</p>
                         <ul className="lists">
                             <li className="list"><a href="#">Términos</a></li>
                             <li className="list"><a href="#">Privacidad</a></li>

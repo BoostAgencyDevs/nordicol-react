@@ -24,7 +24,7 @@ const KeyBenefits = () => {
             id: 4,
             icon: "fa-solid fa-shield",
             title: "Llega a más personas sin bloqueos",
-            text: "Sistema inteligente que protege tus cuentas de WhatsApp"
+            text: "Sistema inteligente que protege tus cuentas de Nordicol"
         },
         {
             id: 5,

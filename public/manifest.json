@@ -1,7 +1,7 @@
 {
-  "name": "Nordicol - Automatización WhatsApp",
+  "name": "Nordicol - Automatización",
   "short_name": "Nordicol",
-  "description": "Automatiza tus ventas por WhatsApp con la herramienta #1 del mercado",
+  "description": "Automatiza tus ventas con Nordicol, la herramienta #1 del mercado",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

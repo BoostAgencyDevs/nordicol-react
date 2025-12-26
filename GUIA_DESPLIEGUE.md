@@ -156,3 +156,4 @@ Una vez completados todos los pasos, tu sitio estará en línea con tu dominio p
 - Panel de Netlify: [https://app.netlify.com](https://app.netlify.com)
 - Panel de GoDaddy: [https://sso.godaddy.com](https://sso.godaddy.com)
 
+
